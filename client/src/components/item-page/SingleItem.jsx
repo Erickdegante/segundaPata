@@ -10,5 +10,3 @@ const SingleItem = props => (
 );
 
 export default SingleItem;
-
-//onClick={this.setProduct}
