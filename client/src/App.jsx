@@ -21,12 +21,15 @@ class App extends Component {
             <Route path="/Upload" component={UploadProduct} />
             <Route  component={Error} />
           </Switch>
+
           <Footer/>
-        </div>
+                  </div>
       </BrowserRouter>
+
     );
   }
 };
+
 
 
 ReactDOM.render(<App />, document.getElementById("App"));
