@@ -93,7 +93,8 @@ render(){
         />
         <ItemsHome items={this.state.items} products={this.state.products} setProduct={this.setProduct}/>
       </center>
-    
+      <div class="fb-share-button" data-href="https://holacode.com/" data-layout="button_count" data-size="large" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flocalhost300%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+
     </div>
     )
   }

@@ -77,6 +77,7 @@ const insertProduct = function(name, descrip, price, category, email, vendor, ca
 
 
 
+
 module.exports.selectAll = selectAll;
 module.exports.selectToys = selectToys;
 module.exports.insertProduct = insertProduct;

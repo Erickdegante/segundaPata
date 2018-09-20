@@ -35,7 +35,9 @@ class ItemPage extends Component {
     : <main>
       <h1>"Render individual item page"</h1>
     </main> }
+
   </div>
+  
 
 )}
 };
