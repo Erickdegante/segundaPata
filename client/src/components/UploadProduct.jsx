@@ -84,25 +84,7 @@ class UploadProduct extends React.Component {
     }
   });
 }
-    //   fetch("http://localhost:3000/items", {
-    //     method: "POST",
-    //     body: JSON.stringify({
-    //       name: name,
-    //       description: description,
-    //       price: price,
-    //       category: category,
-    //       email: email,
-    //       vendor: vendor
-    //     }),
-    //     headers: {
-    //       "Content-Type": "application/json"
-    //     }
-    //   })
-    //
-    //     .catch(error => console.error("Error:", error));
-    //     alert('Tu producto ha sido enviado con éxito');
-    //     // event.preventDefault(); //esto está todo roto
-    // }
+
 
   submitItem(event) {
     event.preventDefault();

@@ -59,7 +59,7 @@ var selectAccesories = function(callback) {
 
 
 const insertProduct = function(name, descrip, price, category, email, vendor, callback) {
-  console.log("quiubo desde la db");
+
   connection.query(
     'INSERT INTO items (name, descrip, price, category, email, vendor) VALUES (?, ?, ?, ?, ?, ?)',
     [name, descrip, price, category, email, vendor],
@@ -73,10 +73,17 @@ const insertProduct = function(name, descrip, price, category, email, vendor, ca
     }
   );
 };
-
-
-
-
+/*this is for the comments on each item */
+const insertOne = function(comment, callback) {
+ connection.query('INSERT INTO comments (comment) VALUES (?)',
+   [comment], (err, results, fields) => {
+     if(err) {
+       callback(err, null);
+     } else {
+       callback(null, results);
+     }
+   });
+};
 
 module.exports.selectAll = selectAll;
 module.exports.selectToys = selectToys;
@@ -84,3 +91,4 @@ module.exports.insertProduct = insertProduct;
 module.exports.selectClothes = selectClothes;
 module.exports.selectBeds = selectBeds;
 module.exports.selectAccesories = selectAccesories;
+module.exports.insertOne=insertOne;

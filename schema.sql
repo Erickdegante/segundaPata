@@ -15,6 +15,12 @@ CREATE TABLE items (
   PRIMARY KEY (ID)
 );
 
+CREATE TABLE comments(
+ id int NOT NULL AUTO_INCREMENT,
+ comment varchar(200) NOT NULL,
+ PRIMARY KEY (ID)
+);
+
 /*  Execute this file from the command line by typing:
  *    mysql -u root -p < server/schema.sql
  *  to create the database and the tables.*/

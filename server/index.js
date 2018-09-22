@@ -12,7 +12,6 @@ app.get('/items', function (req, res) {
     if(err) {
       res.sendStatus(500);
     } else {
-      console.log("get all items request performed")
       res.json(data);
     }
   });
@@ -23,7 +22,6 @@ app.get('/toys', function (req, res) {
       console.log(err);
       res.sendStatus(500);
     } else {
-      console.log("get all toys request performed")
       res.json(data);
     }
   });
@@ -57,7 +55,7 @@ app.get('/accesories', function (req, res) {
       console.log(err);
       res.sendStatus(500);
     } else {
-      console.log("get all accesories request performed")
+
       res.json(data);
     }
   });
@@ -71,7 +69,7 @@ app.post('/items', function(req, res) {
   let category = req.body.category;
   let email = req.body.email;
   let vendor = req.body.vendor;
-  console.log(name);
+
   if (!name) {
     res.sendStatus(400);
   } else {
@@ -83,6 +81,23 @@ app.post('/items', function(req, res) {
       }
     });
   }
+});
+/*this is for the comments on each item secction */
+app.post('/comment', function(req, res){
+
+ let comment= req.body.comment;
+
+ if(!comment) {
+   res.sendStatus(400);
+ } else {
+   items.insertOne(comment,(err, results) => {
+     if (err) {       
+       res.sendStatus(500);
+     } else {
+       res.status(200).json(results);
+     }
+   });
+ }
 });
 
 
