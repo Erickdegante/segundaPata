@@ -2,6 +2,7 @@ import React, {Component}from "react";
 import { Switch, Route } from 'react-router-dom';
 import $ from "jquery";
 import axios from "axios";
+import Pay from "./pay.js"
 
 import SingleItem from "./SingleItem.jsx";
 
@@ -35,9 +36,9 @@ class ItemPage extends Component {
     : <main>
       <h1>"Render individual item page"</h1>
     </main> }
-
+    <Pay />
   </div>
-  
+
 
 )}
 };
